@@ -19,13 +19,20 @@ const initalState = () => {
         fact: "Last country in the world to be inhabited by humans",
       },
     ],
+    destinationSelected: null,
   };
 };
 
 export const destinationSlice = createSlice({
   name: "destination",
   initialState: initalState,
-  reducers: {},
+  reducers: {
+    destinationClicked: (state, action) => {
+      state.destinationSelected = action.payload;
+      console.log(action);
+    },
+  },
 });
 
+export const { destinationClicked } = destinationSlice.actions;
 export const destinationReducer = destinationSlice.reducer;
