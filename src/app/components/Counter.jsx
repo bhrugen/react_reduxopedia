@@ -14,6 +14,7 @@ function Counter() {
       <div className="row">
         <div className=" p-4 col-12 col-md-6">
           <div className="border p-4">
+            <h4 className="text-success pb-2">Basic Counter</h4>
             <button
               className="btn btn-primary"
               onClick={() => dispatch(increment())}
@@ -27,6 +28,36 @@ function Counter() {
             >
               Remove
             </button>
+          </div>
+        </div>
+        <div className=" p-4 col-12 col-md-6">
+          <div className="border p-4">
+            <h4 className="text-success pb-2">Multiplier Counter</h4>
+            <div className="row">
+              <div className="col-4 p-1">
+                <input
+                  type="test"
+                  placeholder="multipler..."
+                  className="form-control"
+                />
+              </div>
+              <div className="col-4 p-1">
+                <button
+                  className="btn btn-primary form-control"
+                  onClick={() => dispatch(increment())}
+                >
+                  Add
+                </button>
+              </div>
+              <div className="col-4 p-1">
+                <button
+                  className="btn btn-danger form-control"
+                  onClick={() => dispatch(decrement())}
+                >
+                  Remove
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
